@@ -17,9 +17,10 @@ namespace RazorClassLibrary
             var order = new OrderModel();
             var template = GetTemplate("RazorClassLibrary.OrderTemplate.cshtml");
 
-            // TODO: add RazorEngine to support rendering
+            // parse template using RazorEngine
+            var html = RazorEngine.Razor.Parse(template, order);
 
-            throw new NotImplementedException();
+            return html;
         }
 
         /// <summary>
