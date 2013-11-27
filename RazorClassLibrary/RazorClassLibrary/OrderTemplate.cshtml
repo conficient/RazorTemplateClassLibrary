@@ -1,0 +1,22 @@
+﻿@model OrderModel
+
+@*
+    This is our razor view template for an order confirmation email. We can specify the model
+    in the usual manner and get intellisense when editing.
+*@
+
+<h2>Your Order with @Model.CompanyName</h2>
+
+<p>Dear @Model.CustomerName</p>
+
+<p>Thank you for your order, which is as follows:</p>
+
+<ul>
+    @foreach (var item in Model.ProductsOrdered)
+    {
+        <li>@item</li>
+    }
+</ul>
+<p>Our expected delivery date is @Model.DeliveryDate.ToString("d")</p>
+
+<p><a href="@Model.Url"></a>@Model.CompanyName</p>
