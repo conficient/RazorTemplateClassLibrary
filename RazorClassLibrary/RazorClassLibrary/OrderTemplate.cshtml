@@ -9,14 +9,27 @@
 
 <p>Dear @Model.CustomerName</p>
 
-<p>Thank you for your order, which is as follows:</p>
-
-<ul>
-    @foreach (var item in Model.ProductsOrdered)
-    {
-        <li>@item</li>
-    }
-</ul>
-<p>Our expected delivery date is @Model.DeliveryDate.ToString("d")</p>
-
 <p><a href="@Model.Url"></a>@Model.CompanyName</p>
+
+@if (!Model.ProductsOrdered.Any())
+{
+    <p>Your order is empty - no products selected.</p>
+}
+else
+{
+    // show products
+
+    <p>Thank you for your order, which is as follows:</p>
+
+    <ul>
+        @foreach (var item in Model.ProductsOrdered)
+        {
+            <li>@item</li>
+        }
+    </ul>
+    <p>Our expected delivery date is @Model.DeliveryDate.ToString("d")</p>
+}
+
+<p>
+    You ordered @Model.ProductsOrdered.Count() products!
+</p>
