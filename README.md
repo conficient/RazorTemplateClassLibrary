@@ -1,6 +1,8 @@
 RazorTemplateClassLibrary
 =========================
 
+## Updated for MVC5
+
 Demonstrates amendments to C# class library to enable IDE support for Razor templates.
 
 If you wish to create, edit and use Razor .cshtml (or .vbhtml) format documents outside of an ASP.NET 
