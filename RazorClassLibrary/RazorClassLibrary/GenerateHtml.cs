@@ -29,7 +29,7 @@ namespace RazorClassLibrary
         private static string GetTemplate(string resourceName)
         {
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();
-            assembly.CustomAttributes.Any();
+            
             using (var stream = assembly.GetManifestResourceStream(resourceName))
             {
                 using (var reader = new System.IO.StreamReader(stream))
