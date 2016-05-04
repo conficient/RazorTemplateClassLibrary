@@ -7,10 +7,10 @@ using RazorClassLibrary;
 using NUnit.Framework;
 namespace RazorClassLibrary.Tests
 {
-    [TestFixture()]
+    [TestFixture]
     public class GenerateHtmlTests
     {
-        [Test()]
+        [Test]
         public void ForOrderTest()
         {
             // create html using template and a model
